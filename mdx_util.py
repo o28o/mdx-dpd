@@ -14,7 +14,7 @@ def get_definition_mdx(word, builder):
         fp.close()
         print("lemma: " + word)
         content = builder.mdx_lookup(word)
-    pattern = re.compile(r"@@@LINK=([\w\s]*)")
+	pattern = re.compile(r"@@@LINK=([\w\s]*[0-9]*.[0-9]*)")
 
     all_links_content = ""
     for found_link in content:
